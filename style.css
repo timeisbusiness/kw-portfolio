@@ -1,0 +1,172 @@
+:root {
+    --primary: #0A2540;
+    --secondary: #1E3A8A;
+    --light: #F1F5F9;
+    --dark: #111827;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #F1F5F9;
+    color: #111827;
+    line-height: 1.6;
+}
+
+header{
+    background: #0A2540;
+    color: #F1F5F9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #0A2540;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--secondary);
+    padding-left: 10px;
+}
+
+.about, .skills, .projects, .experience, .education, .contact {
+    background: #F1F5F9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgb(red, green, blue);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about:hover,
+.skills:hover,
+.projects:hover,
+.experience:hover,
+.education:hover,
+.contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgb(red, green, blue);
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    list-style: none;
+    gap: 10px;
+}
+
+.skills li {
+    background: var(--light);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.projects a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: var(--secondary);
+    color: #F1F5F9;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.projects a:hover {
+    background: var(--primary);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #F1F5F9;
+    margin-top: 40px;
+}
+
+.btn-linkedin {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0A2540;
+    color: #F1F5F9;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3 ease;
+}
+
+.btn-linkedin:hover {
+    background: #084B8A;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 40px 15px;
+    }
+    header h1 {
+        font-size: 1.9rem;
+    }
+    header p {
+        font-size: 1.9rem;
+    }
+    section {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .skills ul {
+        grid-template-columns: 1fr;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .btn-linkedin {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+    header p {
+        font-size: 0.95rem;
+    }
+    .about,
+    .skills,
+    .projects,
+    .experience,
+    .education, 
+    .contact {
+        padding: 18px;
+    }
+    footer {
+        font-size: 0.85rem;
+    }
+}
