@@ -96,6 +96,38 @@ h2 {
     background: var(--primary);
 }
 
+.infographie-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.infographie-card{
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px rgba(0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.infographie-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.infographie-card h3 {
+    padding: 10px;
+    font-size: 1rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+.infographie-card:hover {
+    transform: translateY(-5px);
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -169,4 +201,5 @@ footer {
     footer {
         font-size: 0.85rem;
     }
+
 }
